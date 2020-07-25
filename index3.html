@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Part 2 problem solving</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styless.css">
+</head>
+    <body>
+        <input type="text" name="text" id="inputText" />
+        <button onclick="pushData();">Show</button>
+        <p id="pText"></p>
+        <p id="max"></p>
+        <p id="min"></p>
+        <p id="sum"></p>
+        <p id="avg"></p>
+        <p id="demo"></p>
+        
+        
+        <script>
+            
+            var myArr=[];
+            
+            function pushData(){
+                
+                var inputText = document.getElementById('inputText').value;
+                
+                myArr.push(inputText);
+                
+                myArr.sort();
+                
+                var max = myArr[0];
+                var min = myArr[0];
+                var sum = myArr[0];
+                
+                for (var i = 1; i < myArr.length; i++) {
+        if (myArr[i] > max) {
+            max = myArr[i];
+        }
+        if (myArr[i] < min) {
+            min = myArr[i];
+        }
+        sum = sum + myArr[i];
+    }
+                
+            
+                
+                document.getElementById('max').innerHTML="Max: "+max;
+                
+                document.getElementById('min').innerHTML="Min: "+min;
+                
+                document.getElementById('sum').innerHTML="Sum: "+sum;
+                
+                document.getElementById('avg').innerHTML="Average: "+sum/(myArr.length);
+                
+                myArr.reverse();
+  document.getElementById("demo").innerHTML = myArr;
+                
+            }
+        </script>
+    </body>

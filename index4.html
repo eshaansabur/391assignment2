@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Magic!! Magic!!</title>
+        <link rel="stylesheet" href="stylees.css">
+    </head>
+<body>
+
+<h2><center>Magic!!!! Magic!!!!</center></h2>
+
+<button id="delete" onclick="myFunction()">Clear all</button>
+<button id="delete" onclick="myFunctiontwo()">Capitalize</button>
+<button id="delete" onclick="myFunctionthree()">Smallize</button>
+<button id="delete" onclick="myFunctionfour()">Sort</button>
+<button id="delete" onclick="myFunctionfive()">Reverse Sort</button>
+<button id="delete" onclick="myFunctionsix()">Spaceless</button>
+<button id="delete" onclick="myFunctionseven()">number for line</button>
+<button id="delete" onclick="myFunctioneight()">Shuffle</button>
+
+<p id="demo">This is a demo text for question four</p>
+    <script type="text/javascript" src="shim.js"></script>
+
+<script>
+function myFunction() {
+  var str = "This is a demo text for question four";
+  var res = str.split(" ", 0);
+  document.getElementById("demo").innerHTML = res;
+}
+    function myFunctiontwo() {
+  var str = "This is a demo text for question four";
+  
+  var upper = str.toUpperCase();
+  document.getElementById("demo").innerHTML = upper;
+}
+    function myFunctionthree() {
+  var str = "This is a demo text for question four";
+  
+  var lower = str.toLowerCase();
+  document.getElementById("demo").innerHTML = lower;
+}
+    function myFunctionfour() {
+  var str = "This is a demo text for question four";
+  
+  var sort = str.split('').sort().join('');
+  document.getElementById("demo").innerHTML = sort;
+}
+    function myFunctionfive() {
+  var str = "This is a demo text for question four";
+  
+  var reverse = str.split(' ').reverse().join(' ');
+  document.getElementById("demo").innerHTML = reverse;
+}
+    function myFunctionsix() {
+  var str = "   This is a demo text for question four   ";
+  
+  var cleanstr = str.trim();
+  document.getElementById("demo").innerHTML = cleanstr;
+}
+    function myFunctionseven() {
+  var str = "This is a demo text, for question four. It  Places a number in front of each line. ";
+  
+  var add = str.split('\n').map((line, index) => `${index + 1}. ${line}`).join('\n');
+  document.getElementById("demo").innerHTML = add;
+}
+    function myFunctioneight() {
+  var str = "This is a demo text, for question four. It  Places a number in front of each line. ";
+  
+  var shuffle = str.split(' ').join('').Math.random();
+  document.getElementById("demo").innerHTML = shuffle;
+}
+    
+</script>
+
+</body>
+</html>

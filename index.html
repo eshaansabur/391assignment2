@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Fortune Teller</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2><center>Are you worried about your fortune?</center></h2>
+<h2 id="findout"><center>Let's find out about yours...</center></h2>
+
+<p id="demo"></p>
+    
+    <button id="yellow" onclick="myFunction()">Yellow</button>
+    <button id="blue" onclick="myFunctiontwo()">Blue</button>
+    <button id="green" onclick="myFunctionthree()">Green</button>
+    <button id="grey" onclick="myFunctionfour()">Grey</button>
+
+<script>
+    
+var myArray = ["True wisdom comes not from knowledge, but from understanding.", "All your dreams can come true, if you have the courage to pursue them.", "The secret of getting ahead is getting started.", "Don't limit yourself.", "Happiness is not something ready made. It comes from your own actions.", "Hold the vision, trust the process.", "Magic is believing in yourself. If you can make that happen, you can make anything happen."];
+    
+    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    
+document.getElementById("demo").innerHTML = randomItem;
+    function myFunction() {
+  document.getElementById("demo").style.color = "black";
+  document.getElementById("demo").style.backgroundColor = "yellow";    
+}
+    function myFunctiontwo() {
+  document.getElementById("demo").style.color = "white";
+  document.getElementById("demo").style.backgroundColor = "blue";    
+}
+    function myFunctionthree() {
+  document.getElementById("demo").style.color = "yellow";
+  document.getElementById("demo").style.backgroundColor = "green";    
+}
+    function myFunctionfour() {
+  document.getElementById("demo").style.color = "pink";
+  document.getElementById("demo").style.backgroundColor = "grey";    
+}
+</script>
+
+</body>
+</html>

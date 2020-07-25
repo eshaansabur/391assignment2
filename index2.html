@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Weight Converter</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+<section id="zz">
+<h2><center>Convert from pound to kilogram</center></h2>
+<p>Type a value in the Pounds field to convert the value to Kilograms:</p>
+
+<p>
+  <label>Convert: </label>
+  <input id="inputPounds" type="number" placeholder="Input" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+    <select id="selectid" name="selectname" onchange="jsfunc1()">
+  <option value="val1" id="valid1">Pound to Kilogram</option>
+  <option value="val2" id="valid2">Kilogram to Pound</option>
+    </select>
+</p>
+<p> <span id="output"></span></p>
+    </section>
+
+<script>
+            function weightConverter(valNum) {
+                if(document.getElementById('selectid').value == "val1") {
+     document.getElementById("output").innerHTML=valNum/2.2046+" (from pound to kg)";
+}
+                else if (document.getElementById('selectid').value == "val2") {
+  document.getElementById("output").innerHTML=valNum*2.2046+" (from kg to pound)";
+}
+  
+}
+   
+    
+    
+    
+    
+
+</script>
+
+</body>
+</html>
